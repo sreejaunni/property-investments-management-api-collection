@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "6df38b7e-31c1-41d9-ab1b-45d2f892a3d8",
+		"name": "Property Investment Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2524034"
+	},
+	"item": [
+		{
+			"name": "Get Investment Campaigns",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_API_TOKEN"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/api/campaigns?page=1&per_page=20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"campaigns"
+					],
+					"query": [
+						{
+							"key": "country_code",
+							"value": "US",
+							"disabled": true
+						},
+						{
+							"key": "status",
+							"value": "available",
+							"disabled": true
+						},
+						{
+							"key": "min_target",
+							"value": "1000",
+							"disabled": true
+						},
+						{
+							"key": "max_target",
+							"value": "5000",
+							"disabled": true
+						},
+						{
+							"key": "min_investors",
+							"value": "10",
+							"disabled": true
+						},
+						{
+							"key": "max_investors",
+							"value": "100",
+							"disabled": true
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "per_page",
+							"value": "20"
+						},
+						{
+							"key": "city_area",
+							"value": "NewYork",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Generated from cURL: curl --location --request GET 'https://example.com/api/campaigns?page=1&per_page=10' \\\n--header 'Authorization: Bearer YOUR_API_TOKEN' \\\n--header 'Content-Type: application/json'"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Investment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"guest_token\": \"123e4567-e89b-12d3-a456-426614174000\",\n    \"amount\": \"100\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/api/campaigns/2/invest",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"api",
+						"campaigns",
+						"2",
+						"invest"
+					]
+				},
+				"description": "Generated from cURL: curl --request POST \"https://yourdomain.com/api/invest\" \\\n  --header \"Accept: application/json\" \\\n  --header \"Content-Type: application/json\" \\\n  --data '{\n    \"campaign_id\": 1,\n    \"guest_token\": \"123e4567-e89b-12d3-a456-426614174000\",\n    \"amount\": 5000\n}'"
+			},
+			"response": []
+		}
+	]
+}
