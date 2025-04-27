@@ -33,7 +33,7 @@
 					"query": [
 						{
 							"key": "country_code",
-							"value": "US",
+							"value": "AE",
 							"disabled": true
 						},
 						{
@@ -48,17 +48,17 @@
 						},
 						{
 							"key": "max_target",
-							"value": "5000",
+							"value": "50000",
 							"disabled": true
 						},
 						{
 							"key": "min_investors",
-							"value": "10",
+							"value": "1",
 							"disabled": true
 						},
 						{
 							"key": "max_investors",
-							"value": "100",
+							"value": "10000",
 							"disabled": true
 						},
 						{
@@ -71,12 +71,12 @@
 						},
 						{
 							"key": "city_area",
-							"value": "NewYork",
+							"value": "Dubai Marina",
 							"disabled": true
 						}
 					]
 				},
-				"description": "Generated from cURL: curl --location --request GET 'https://example.com/api/campaigns?page=1&per_page=10' \\\n--header 'Authorization: Bearer YOUR_API_TOKEN' \\\n--header 'Content-Type: application/json'"
+				"description": "Generated from cURL: curl --location --request GET 'http://localhost/api/campaigns?page=1&per_page=10' \\\n--header 'Authorization: Bearer YOUR_API_TOKEN' \\\n--header 'Content-Type: application/json'"
 			},
 			"response": []
 		},
@@ -96,7 +96,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"guest_token\": \"123e4567-e89b-12d3-a456-426614174000\",\n    \"amount\": \"100\"\n}",
+					"raw": "{\n    \"guest_token\": \"123e4567-e89b-12d3-a456-426614174000\",\n    \"amount\": \"1000\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
